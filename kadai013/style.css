@@ -1,0 +1,142 @@
+/* PC、スマホ共通スタイル */
+body {
+  font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial,
+    sans-serif;
+}
+
+p {
+  font-size: 15px;
+}
+
+#main-visual>img {
+  width: 100%;
+}
+
+/*================
+PC用のスタイル 
+=================*/
+@media screen and (min-width: 768px) {
+  /* ヘッダー */
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* ナビゲーションのレイアウト */
+#nav-pc { display: block;}
+#menu-sp,
+#nav-sp { display: none;}
+}
+
+ /*====================
+  スマートフォン用のスタイル
+ =====================*/
+ @media screen and (min-width: 768px) {
+  #menu-sp,
+  #nav-sp {
+    display: none;
+  }
+  /* ヘッダー */
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+    /* PC用ナビゲーション表示 */
+  #nav-pc {
+    display: block;
+    text-align: right;
+    font-size: 14px;
+    padding-top: 15px;
+  }
+
+  #nav-pc>a {
+    text-decoration: none;
+    margin-left: 20px;
+    color: #0d0d0d;
+  }
+
+  #nav-pc>a:hover {
+    text-decoration: underline;
+  }
+
+  /* スマホ用ナビ非表示 */
+  #menu-sp,
+  #nav-sp {
+    display: none;
+  }
+}
+/* ここからスマホ表示設定 */
+ @media screen and (max-width: 767px) {
+  /* 横幅調整 */
+  body {
+    min-width: 375px;
+    margin: 0;
+  }
+
+  /* PC用ナビ非表示 */
+  #nav-pc {
+    display: none;
+  }
+
+  /* ハンバーガーメニュー表示 */
+  #menu-sp {
+    display: block; /* ←ここで表示 */
+    float: right;
+    padding: 0;
+  }
+
+  /* スマホ用ナビ */
+  #nav-sp {
+    background-color: #ce933e;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: none; /* 初期状態は非表示 */
+    z-index: 100;
+  }
+
+  /* ×ボタン */
+  #close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+  }
+
+  #nav-sp nav ul {
+    padding-left: 0;
+  }
+
+  #nav-sp nav li {
+    list-style: none;
+  }
+
+  #logo-sp {
+    margin: 80px 0 30px 20px;
+  }
+
+  /* ナビリンク */
+  #nav-sp nav a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  #nav-sp nav a:hover {
+    text-decoration: underline;
+  }
+
+  #nav-sp .menu {
+    display: block;
+    margin: 0 20px;
+    height: 44px;
+    font-size: 16px;
+    background-image: url("images/arrow.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    text-decoration: none;
+  }
+   }
